@@ -26,12 +26,12 @@ h1 {
 
 .story{
     background-color: rgba(255, 255, 255, 0.716);
-    padding: 2.5em;
+    padding: 3.5em;
     width: 80vw;
     margin: 0 auto;
     font-family: serif;
     font-size: 13pt;
-    line-height: 1.8em;
+    line-height: 2.2em;
     border-radius: 30px 30px 30px 30px;
 }
 
@@ -47,13 +47,18 @@ h1 {
     background-color: rgba(255, 255, 255, 0.9);
     /*メニューバー背景色*/
     width: 100vw;
-    height: 50vh;
+    height: 20vh;
     /*横幅を100%に*/
     padding: 0 0;
 }
 
+#error-message{
+    font-size: 9pt;
+    float: left;
+}
+
 .user_area{
-    width:88vw;
+    width:60vw;
     margin: 0 auto;
     padding: 1.2em;
 }
@@ -64,7 +69,21 @@ h1 {
     margin: 0 auto;
 }
 .submit-button{
-    width: 10vw;
+    float: left;
+    width: 5vw;
     margin-left: 10px;
     padding: 0.5em;
+
+}button {
+    width: 5em;
+    height: 5em;
+}
+
+.user{
+    border-bottom: 1px dotted #969696;
+    margin-bottom: 15px;
+}
+.gpt {
+    border-bottom: 1px dotted #969696;
+    margin-bottom: 15px;
 }
