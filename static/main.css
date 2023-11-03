@@ -1,0 +1,70 @@
+@keyframes gradient-background {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background-image: linear-gradient(-45deg,#f9a5c5, #85d4f0, rgb(239, 245, 159));
+    background-size: 300% 300%;
+    animation: gradient-background 25s ease infinite;
+}
+
+h1 {
+    font-size: 9pt;
+    font-weight:2px;
+    color: azure;
+}
+
+.story{
+    background-color: rgba(255, 255, 255, 0.716);
+    padding: 2.5em;
+    width: 80vw;
+    margin: 0 auto;
+    font-family: serif;
+    font-size: 13pt;
+    line-height: 1.8em;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.forms{
+    display: block;
+    position: fixed;
+    /*ポジションを固定する*/
+    bottom: 0px;
+    /*一番上に設置*/
+    left: 0px;
+    z-index: 9999;
+    /*どの要素よりも上にくるように*/
+    background-color: rgba(255, 255, 255, 0.9);
+    /*メニューバー背景色*/
+    width: 100vw;
+    height: 50vh;
+    /*横幅を100%に*/
+    padding: 0 0;
+}
+
+.user_area{
+    width:88vw;
+    margin: 0 auto;
+    padding: 1.2em;
+}
+
+.textarea{
+    float: left;
+    width: 50vw;
+    margin: 0 auto;
+}
+.submit-button{
+    width: 10vw;
+    margin-left: 10px;
+    padding: 0.5em;
+}

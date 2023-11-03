@@ -1,6 +1,22 @@
 $(document).ready(function() {
         // ページ読み込み時に物語をロードする
         loadStory();
+        console.log('ストーリーが読み込まれました。')
+
+    $("#user-input").on("input", function () {
+        const maxLength = 200;
+        const charCount = $("#user-input").val().length;
+
+        if (charCount > maxLength) {
+            $("#error-message").show();
+            $("#submit-button").prop("disabled", true);
+        } else {
+            $("#error-message").hide();
+            $("#submit-button").prop("disabled", false);
+        }
+
+        $("#char-counter").text(charCount + " / " + maxLength);
+    });
 
     $("#input-form").on("submit", function(event) {
         event.preventDefault();

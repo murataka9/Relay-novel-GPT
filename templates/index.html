@@ -4,16 +4,31 @@
     <title>連続リレー小説 with GPT4 ~AIとみんなで物語を作ろう~</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/static/app.js"></script>
+    <link rel="stylesheet" href="/static/main.css"> <!-- この行を追加 -->
 </head>
 <body>
     <h1>連続リレー小説 with GPT4 ~AIとみんなで物語を作ろう~</h1>
     <h2 id="story-title"></h2>
-    <div id="story-container">
-        <!-- ここに物語の一部が表示されます -->
+
+    <div class="story">
+        <div id="story-container">
+            <!-- ここに物語の一部が表示されます -->
+        </div>
     </div>
-    <form id="input-form">
-        <input type="text" id="user-input" required>
-        <input type="submit" value="投稿">
-    </form>
+
+    <div class="forms">
+        <div class="user_area">
+            <form id="input-form">
+                <div class="textarea">
+                    <textarea id="user-input" rows="5" cols="60" required></textarea>
+                    <div id="error-message" style="color: red; display: none;">200文字を超えています。</div>
+                    <div id="char-counter">0 / 200</div>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" id="submit-button" value="投稿">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
