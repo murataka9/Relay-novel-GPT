@@ -18,14 +18,25 @@ $(document).ready(function() {
         $("#char-counter").text(charCount + " / " + maxLength);
     });
 
-    $("#input-form").on("submit", function(event) {
+    $("#input-form").on("submit", function (event) {
         event.preventDefault();
-    const userInput = $("#user-input").val();
-    $.post("/submit", {text: userInput}, function (data) {
-        addStoryElement(data.input_text, "user");
-    addStoryElement(data.generated_text, "gpt");
-    $("#user-input").val("");
-    $("#user-input").focus();
+        const userInput = $("#user-input").val();
+
+        // 投稿ボタンを無効化し、待機メッセージを表示する
+        $("#submit-button").prop("disabled", true).addClass("disabled");
+        $("#submit-button").text("しばらくお待ちください...");
+
+        $.post("/submit", { text: userInput }, function (data) {
+            addStoryElement(data.input_text, "user");
+            addStoryElement(data.generated_text, "gpt");
+            $("#user-input").val("");
+            $("#user-input").focus();
+
+            // 投稿ボタンの無効化と待機メッセージを元に戻す
+            setTimeout(function () {
+                $("#submit-button").prop("disabled", false).removeClass("disabled");
+                $("#submit-button").text("投稿");
+            }, 5000);
         });
     });
 });

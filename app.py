@@ -15,7 +15,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 summary = ""
 title = "ガマジャンパー"
 prompts = [] # use a list to store the story
-TOKEN_THRESHOLD = 400
+TOKEN_THRESHOLD = 12000
 
 # New flask instance
 app = Flask(__name__)

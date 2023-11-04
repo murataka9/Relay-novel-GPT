@@ -25,9 +25,10 @@ h1 {
 }
 
 .story{
+    float: left;
     background-color: rgba(255, 255, 255, 0.716);
     padding: 3.5em;
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
     font-family: serif;
     font-size: 13pt;
@@ -36,18 +37,17 @@ h1 {
 }
 
 .forms{
+    float: left;
     display: block;
     position: fixed;
-    /*ポジションを固定する*/
     bottom: 0px;
     /*一番上に設置*/
-    left: 0px;
-    z-index: 9999;
+    right: 0px;
     /*どの要素よりも上にくるように*/
     background-color: rgba(255, 255, 255, 0.9);
     /*メニューバー背景色*/
-    width: 100vw;
-    height: 20vh;
+    width: 25vw;
+    height: 100vh;
     /*横幅を100%に*/
     padding: 0 0;
 }
@@ -60,21 +60,20 @@ h1 {
 .user_area{
     width:60vw;
     margin: 0 auto;
-    padding: 1.2em;
+    padding-top: 3.5em;
+    padding-right: 0.5em;
 }
 
 .textarea{
-    float: left;
-    width: 50vw;
+    width: 90%;
     margin: 0 auto;
 }
 .submit-button{
-    float: left;
-    width: 5vw;
-    margin-left: 10px;
+    width: 90%;
+    margin-left: 35px;
     padding: 0.5em;
-
-}button {
+}
+button {
     width: 5em;
     height: 5em;
 }
@@ -86,4 +85,13 @@ h1 {
 .gpt {
     border-bottom: 1px dotted #969696;
     margin-bottom: 15px;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+h2{
+    color: #f9a5c5;
 }
